@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/rootLayout"
+    android:layout_height="match_parent"
+    android:background="#0f0c29"
+    android:padding="16dp">
+
+    <!-- Main Content Container -->
+    <LinearLayout
+        android:id="@+id/mainContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Animated Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="20dp">
+
+            <!-- Lottie Animation -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimation"
+                android:layout_width="280dp"
+                android:layout_height="250dp"
+                android:layout_marginBottom="0dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/splash" />
+
+            <!-- Welcome Text -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to"
+                android:textColor="#2196F3"
+                android:textSize="28sp"
+                android:alpha="0.8"
+                android:textStyle="bold"
+                android:shadowColor="#20000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:letterSpacing="0.03"
+                android:fontFamily="sans-serif-light"/>
+
+            <!-- Main Title -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/titleText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Crypto"
+                    android:textColor="#FFFFFF"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:shadowColor="#20000000"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="4"/>
+
+                <TextView
+                    android:id="@+id/changingWord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Analyze"
+                    android:textColor="#6e3bff"
+                    android:textSize="36sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.02"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!-- Feature Grid -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="3"
+            android:paddingHorizontal="8dp">
+
+            <!-- Feature Items (3 columns) -->
+            <!-- Cryptocurrencies Card -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/feature_bg"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1000+"
+                    android:textColor="#03A9F4"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cryptocurrencies"
+                    android:textColor="#FFFFFF"
+                    android:alpha="0.8"
+                    android:textSize="9sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <!-- Real-time Data Card -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/feature_bg"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="24/7"
+                    android:textColor="#03A9F4"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Real-time Data"
+                    android:textColor="#FFFFFF"
+                    android:alpha="0.8"
+                    android:textSize="10sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <!-- Exchanges Card -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/feature_bg"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="80+"
+                    android:textColor="#03A9F4"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Exchanges Tracked"
+                    android:textColor="#FFFFFF"
+                    android:alpha="0.8"
+                    android:textSize="8sp"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Action Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:id="@+id/buttonContainer"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:visibility="invisible">
+
+                <Button
+                    android:id="@+id/getStartedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_edittext_bg"
+                    android:text="Get Started"
+                    android:textColor="#FFFFFF"
+                    android:backgroundTint="@color/colorPrimaryVariant"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.05"
+                    android:paddingVertical="18dp"/>
+
+                <View
+                    android:id="@+id/buttonGlow"
+                    android:layout_width="260dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:background="#333"
+                    android:visibility="invisible"/>
+            </RelativeLayout>
+
+            <!-- Footer -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="CryptoMarketAnalysis 2025\nAll rights reserved | University of Education"
+                android:textColor="#FFFFFF"
+                android:alpha="0.5"
+                android:textSize="12sp"
+                android:lineSpacingExtra="6sp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

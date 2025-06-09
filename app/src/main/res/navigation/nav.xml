@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/dashboard"> <!-- Set dashboardFragment as the start destination -->
+
+    <!-- Dashboard Fragment -->
+    <fragment
+        android:id="@+id/dashboard"
+        android:name="com.example.cryptomarket.fragment.DashboardFragment"
+        android:label="Dashboard Fragment"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboardFragment_to_videoFragment"
+            app:destination="@id/videoFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_exchange"
+            app:destination="@id/exchange" />
+        <action
+            android:id="@+id/action_dashboard_to_priceAlertFragment"
+            app:destination="@id/priceAlertFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_cryptoPredictFragment"
+            app:destination="@id/cryptoPredictFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_news"
+            app:destination="@id/news" />
+    </fragment>
+
+    <!-- Home Fragment -->
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.cryptomarket.fragment.HomeFragment"
+        android:label="Home Fragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_home_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+
+    <!-- Market Fragment -->
+    <fragment
+        android:id="@+id/market"
+        android:name="com.example.cryptomarket.fragment.MarketFragment"
+        android:label="Market Fragment"
+        tools:layout="@layout/fragment_market">
+        <action
+            android:id="@+id/action_market_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+
+    <!-- Watch Fragment -->
+    <fragment
+        android:id="@+id/watch"
+        android:name="com.example.cryptomarket.fragment.WatchFragment"
+        android:label="Watch Fragment"
+        tools:layout="@layout/fragment_watch">
+        <action
+            android:id="@+id/action_watch_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+
+    <!-- Details Fragment -->
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.cryptomarket.fragment.DetailsFragment"
+        android:label="Details Fragment">
+        <argument
+            android:name="cryptoCurrency"
+            app:argType="com.example.cryptomarket.models.CryptoCurrency"
+            app:nullable="true"
+            android:defaultValue="@null"/>
+        <action
+            android:id="@+id/action_detailsFragment_to_newsDetailFragment"
+            app:destination="@id/newsDetailFragment" />
+    </fragment>
+
+    <!-- Exchange Fragment -->
+    <fragment
+        android:id="@+id/exchange"
+        android:name="com.example.cryptomarket.fragment.ExchangeFragment"
+        android:label="Exchange Fragment"
+        tools:layout="@layout/fragment_exchange">
+        <action
+            android:id="@+id/action_exchange_to_exchangeDetail"
+            app:destination="@id/exchangeDetail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/exchangeDetail"
+        android:name="com.example.cryptomarket.fragment.ExchangeDetail"
+        android:label="ExchangeDetail" />
+    <fragment
+        android:id="@+id/priceAlertFragment"
+        android:name="com.example.cryptomarket.fragment.PriceAlertFragment"
+        android:label="PriceAlertFragment" />
+    <fragment
+        android:id="@+id/helpAndSupportFragment"
+        android:name="com.example.cryptomarket.fragment.HelpAndSupportFragment"
+        android:label="HelpAndSupportFragment" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.example.cryptomarket.fragment.AboutFragment"
+        android:label="AboutFragment" />
+    <fragment
+        android:id="@+id/videoFragment"
+        android:name="com.example.cryptomarket.fragment.VideoFragment"
+        android:label="fragment_video"
+        tools:layout="@layout/fragment_video" />
+    <fragment
+        android:id="@+id/news"
+        android:name="com.example.cryptomarket.fragment.NewsListFragment"
+        android:label="NewsListFragment" >
+        <action
+            android:id="@+id/action_news_to_newsDetailFragment"
+            app:destination="@id/newsDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsDetailFragment"
+        android:name="com.example.cryptomarket.fragment.NewsDetailFragment"
+        android:label="NewsDetailFragment">
+        <argument
+            android:name="NewsItem"
+            app:argType="com.example.cryptomarket.models.NewsItem" />
+    </fragment>
+    <fragment
+        android:id="@+id/cryptoPredictFragment"
+        android:name="com.example.cryptomarket.fragment.CryptoPredictFragment"
+        android:label="CryptoPredictFragment" />
+    <fragment
+        android:id="@+id/socialTradingFragment"
+        android:name="com.example.cryptomarket.fragment.SocialTradingFragment"
+        android:label="SocialTradingFragment" />
+
+
+</navigation>

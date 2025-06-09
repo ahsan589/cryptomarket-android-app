@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/about"
+        android:title="About"
+        android:icon="@drawable/about" />
+    <item
+        android:id="@+id/nav_share"
+        android:title="Help And Support"
+        android:icon="@drawable/help" />
+    <item
+        android:id="@+id/nav_notification_toggle"
+        android:title="Price Alert"
+        android:icon="@drawable/ic_notification"
+        app:actionLayout="@layout/switch_item" />
+    <item
+        android:id="@+id/nav_socail"
+        android:title="Social Trading Platforms"
+        android:icon="@drawable/ic_plat" />
+
+</menu>

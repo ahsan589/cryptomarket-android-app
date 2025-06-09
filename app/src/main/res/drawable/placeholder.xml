@@ -1,0 +1,6 @@
+<!-- res/drawable/placeholder.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#E0E0E0"/> <!-- Light gray color -->
+    <size android:width="64dp" android:height="64dp"/> <!-- Size of placeholder -->
+    <corners android:radius="8dp"/> <!-- Rounded corners (optional) -->
+</shape>

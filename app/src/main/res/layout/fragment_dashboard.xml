@@ -1,0 +1,341 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layout_marginBottom="10dp">
+
+    <!-- Welcome Section -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/welcomeSection"
+        android:layout_width="0dp"
+        android:layout_height="127dp"
+        android:layout_marginTop="1dp"
+        android:elevation="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.3">
+
+        <!-- Lottie Animation -->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animationView"
+            android:layout_width="140dp"
+            android:layout_height="160dp"
+            android:layout_marginTop="-0dp"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/animation" />
+
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-40dp"
+            android:text=" Crypto Market Analysis "
+            android:textColor="@color/colorPrimaryVariant"
+            android:textStyle="bold|italic"
+            android:shadowColor="#80000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="@id/animationView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.472"
+            app:layout_constraintStart_toEndOf="@id/animationView"
+            app:layout_constraintTop_toTopOf="@id/animationView"
+            app:layout_constraintVertical_bias="0.411" />
+
+        <TextView
+            android:id="@+id/welcomeDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="95dp"
+            android:gravity="center"
+            android:paddingLeft="18dp"
+            android:paddingRight="16dp"
+            android:text="Your gateway to the crypto world"
+            android:textColor="#333"
+            android:textStyle="bold|italic"
+            android:shadowColor="#80000000"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appName" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:background="@color/white"
+        android:layout_marginTop="-10dp"
+        app:layout_constraintTop_toBottomOf="@id/welcomeSection"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="14dp">
+
+            <!-- Dash Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardDash"
+                android:layout_width="0dp"
+                android:layout_height="260dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineVertical">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/imageSliderViewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="260dp"
+                    android:orientation="horizontal" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Price Alerts Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardViewPriceAlerts"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="1dp"
+                android:layout_marginStart="10dp"
+                app:cardCornerRadius="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="8dp"
+                    android:gravity="center"
+                    android:background="@drawable/prii">
+
+                    <TextView
+                        android:id="@+id/cardPriceAlertsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="140dp"
+                        android:text="Set price alerts and never miss a market movement."
+                        android:textSize="9sp"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Videos Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardViewVideos"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="12dp"
+                app:cardCornerRadius="10dp"
+                android:layout_marginEnd="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintTop_toBottomOf="@id/cardDash"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineVertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center"
+                    android:background="@drawable/vido">
+
+                    <TextView
+                        android:id="@+id/cardVideoText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Crypto Tutorials"
+                        android:layout_marginTop="-70dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Learn the basics of cryptocurrency trading with our beginner-friendly videos."
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Exchange Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardViewExchange"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="10dp"
+                app:cardCornerRadius="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintTop_toBottomOf="@id/cardViewPriceAlerts"
+                app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:background="@drawable/exd">
+
+                    <TextView
+                        android:id="@+id/cardExchangeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="150dp"
+                        android:text="Exchanges"
+                        android:textSize="16sp"
+                        android:layout_marginStart="10dp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Explore top crypto exchanges with detailed insights and reviews."
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Price Predictor Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardViewPricePredictor"
+                android:layout_width="0dp"
+                android:layout_height="220dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintTop_toBottomOf="@id/cardViewVideos"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guidelineVertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="24dp"
+                    android:gravity="center"
+                    android:background="@drawable/fit">
+
+                    <TextView
+                        android:id="@+id/cardPricePredictorText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="90dp"
+                        android:text="AI Crypto Price Predictor"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Predict future cryptocurrency prices with AI-powered analysis."
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- News Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardViewNews"
+                android:layout_width="0dp"
+                android:layout_height="270dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="10dp"
+                app:cardCornerRadius="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                app:layout_constraintTop_toBottomOf="@id/cardViewExchange"
+                app:layout_constraintStart_toStartOf="@+id/guidelineVertical"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="18dp"
+                    android:gravity="center"
+                    android:background="@drawable/niw">
+
+                    <TextView
+                        android:id="@+id/cardNewsText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="16sp"
+                        android:layout_marginTop="140dp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Stay updated with the latest news and trends in the cryptocurrency world."
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:gravity="center" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Vertical Guideline for 2-column layout -->
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineVertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

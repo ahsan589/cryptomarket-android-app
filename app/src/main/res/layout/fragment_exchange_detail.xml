@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- Toolbar (Fixed at the top) -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimaryVariant"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="Exchange Detail"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Header Section -->
+            <ImageView
+                android:id="@+id/exchangeImage"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_foreground"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:id="@+id/exchangeName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Exchange Name"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toTopOf="@id/exchangeImage"
+                app:layout_constraintStart_toEndOf="@id/exchangeImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginStart="16dp" />
+
+            <TextView
+                android:id="@+id/exchangeCountry"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Country: Global"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                app:layout_constraintTop_toBottomOf="@id/exchangeName"
+                app:layout_constraintStart_toStartOf="@id/exchangeName"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="4dp" />
+
+            <!-- Stats Section -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/statsContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_background"
+                android:padding="16dp"
+                app:cardBackgroundColor="@android:color/white"
+                android:elevation="6dp"
+                app:layout_constraintTop_toBottomOf="@id/exchangeImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="24dp">
+
+                <TextView
+                    android:id="@+id/trustRankValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="#1"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="30dp"
+                    android:textColor="@color/colorPrimaryVariant"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/yearEstablishedValue"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/trustRankLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Trust Rank"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintTop_toBottomOf="@id/trustRankValue"
+                    app:layout_constraintStart_toStartOf="@id/trustRankValue"
+                    app:layout_constraintEnd_toEndOf="@id/trustRankValue" />
+
+                <TextView
+                    android:id="@+id/yearEstablishedValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="2010"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryVariant"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/trustRankValue"
+                    app:layout_constraintEnd_toStartOf="@id/marketsValue"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/yearEstablishedLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Established"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintTop_toBottomOf="@id/yearEstablishedValue"
+                    app:layout_constraintStart_toStartOf="@id/yearEstablishedValue"
+                    app:layout_constraintEnd_toEndOf="@id/yearEstablishedValue" />
+
+                <TextView
+                    android:id="@+id/marketsValue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimaryVariant"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/yearEstablishedValue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/marketsLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Markets"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintTop_toBottomOf="@id/marketsValue"
+                    app:layout_constraintStart_toStartOf="@id/marketsValue"
+                    app:layout_constraintEnd_toEndOf="@id/marketsValue" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Volume Section -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/volumeContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_background"
+                android:padding="16dp"
+                app:cardBackgroundColor="@android:color/white"
+                android:elevation="6dp"
+                app:layout_constraintTop_toBottomOf="@id/statsContainer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:id="@+id/volumeIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_hour"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent" />
+
+                <TextView
+                    android:id="@+id/volumeText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="24h Volume: 100 BTC"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/volumeIcon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginStart="8dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Visit Website Button -->
+            <Button
+                android:id="@+id/visitWebsiteButton"
+                android:layout_width="0dp"
+                android:layout_height="58dp"
+                android:text="Visit Website"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorPrimaryVariant"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:padding="12dp"
+                android:onClick="onVisitWebsiteClicked"
+                android:elevation="4dp"
+                android:stateListAnimator="@null"
+                app:layout_constraintTop_toBottomOf="@id/volumeContainer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- About Section -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/AboutContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_background"
+                android:padding="16dp"
+                android:elevation="4dp"
+                app:layout_constraintTop_toBottomOf="@id/visitWebsiteButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="24dp">
+
+                <TextView
+                    android:id="@+id/exchangeDescriptionLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="About"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/exchangeDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="This is a sample description of the exchange."
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:lineSpacingExtra="4dp"
+                    app:layout_constraintTop_toBottomOf="@id/exchangeDescriptionLabel"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="16dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Social Links Section -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/SocialContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_background"
+                android:padding="16dp"
+                android:elevation="4dp"
+                app:layout_constraintTop_toBottomOf="@id/AboutContainer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="24dp">
+
+                <TextView
+                    android:id="@+id/socialLinksLabel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Social Links"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:id="@+id/socialLinksContainer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="20dp"
+                    app:layout_constraintTop_toBottomOf="@id/socialLinksLabel"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:id="@+id/facebookIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_facebook"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="96dp" />
+
+                    <ImageView
+                        android:id="@+id/twitterIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_twitter"
+                        android:layout_marginEnd="96dp" />
+
+                    <ImageView
+                        android:id="@+id/redditIcon"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_reddit" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

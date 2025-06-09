@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    >
+
+    <!-- App Logo -->
+    <ImageView
+        android:id="@+id/appLogoImageView"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:src="@drawable/appl"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- App Name -->
+    <TextView
+        android:id="@+id/appNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-39dp"
+        android:text=" Crypto Market Analysis "
+        android:textStyle="bold|italic"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:textSize="24sp"
+        android:layout_gravity="center_horizontal"/>
+
+    <!-- App Version -->
+    <TextView
+        android:id="@+id/appVersionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Version 1.0.0"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp"/>
+
+    <!-- App Description -->
+    <TextView
+        android:id="@+id/appDescriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Crypto Market is an app designed to help users track real-time cryptocurrency prices, manage a watchlist, and analyze market trends."
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"/>
+
+    <!-- Contact Support Button -->
+    <Button
+        android:id="@+id/contactSupportButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#03A9F4"
+        android:text="📲 Contact Support"
+        android:layout_marginTop="16dp"/>
+
+</LinearLayout>
