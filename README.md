@@ -11,15 +11,18 @@ This is an Android application that provides users with real-time cryptocurrency
 - 📰 **Crypto News**: Stay up to date with the latest cryptocurrency news and developments.
 - 💹 **Market Analysis**: View top gainers, losers, and detailed coin data.
 - 📈 **Watchlist**: Track coins you’re interested in.
+- 🔮 Price Prediction: Access predictions and forecasts for popular cryptocurrencies.
+- 🎥 Beginner Videos: Watch educational videos and tutorials to understand the crypto market.
+- 👥 Social Communities: Connect with other crypto enthusiasts to share insights and discuss market trends.
 
 ---
 
 ## 🖼️ Screenshots
 
-| Home Screen | Detail Screen | Watchlist Screen |
-|-------------|---------------|------------------|
-| ![Home](screenshots/home.png) | ![Detail](screenshots/detail.png) | ![Watchlist](screenshots/watchlist.png) |
+| Home Screen | Detail Screen | Watchlist Screen | News Screen |
+|-------------|---------------|------------------|-------------|
+| ![Home](screenshots/home.jpg) | ![Detail](screenshots/detail.jpg) | ![Watchlist](screenshots/watchlist.jpg) |  ![News](screenshots/news.jpeg) |
 
-> **Note:** Place screenshots in the `screenshots/` folder in the repository for proper linking.
+
 
 
