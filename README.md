@@ -19,9 +19,9 @@ This is an Android application that provides users with real-time cryptocurrency
 
 ## 🖼️ Screenshots
 
-| Home Screen | Detail Screen | Watchlist Screen |
-|-------------|---------------|------------------|
-| ![Home](screenshots/home.jpg) | ![Detail](screenshots/detail.jpg) | ![Watchlist](screenshots/watchlist.jpg) |
+| Home Screen | Detail Screen | Watchlist Screen | News Screen |
+|-------------|---------------|------------------|-------------|
+| ![Home](screenshots/home.jpg) | ![Detail](screenshots/detail.jpg) | ![Watchlist](screenshots/watchlist.jpg) |  ![News](screenshots/news.jpeg) |
 
 
 
