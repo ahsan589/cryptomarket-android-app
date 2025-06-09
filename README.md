@@ -18,8 +18,8 @@ This is an Android application that provides users with real-time cryptocurrency
 
 | Home Screen | Detail Screen | Watchlist Screen |
 |-------------|---------------|------------------|
-| ![Home](screenshots/home.png) | ![Detail](screenshots/detail.png) | ![Watchlist](screenshots/watchlist.png) |
+| ![Home](screenshots/home.jpg) | ![Detail](screenshots/detail.jpg) | ![Watchlist](screenshots/watchlist.jpg) |
 
-> **Note:** Place screenshots in the `screenshots/` folder in the repository for proper linking.
+
 
 
