@@ -1,80 +1,61 @@
 package com.example.cryptomarket.models;
 
+import com.google.gson.annotations.SerializedName;
+
 public class VideoItem {
+    @SerializedName("title")
     private String title;
+    
+    @SerializedName("description")
     private String description;
+    
+    @SerializedName("duration")
     private String duration;
-    private int progress;
+    
+    @SerializedName("views")
+    private int views;
+    
+    @SerializedName("thumbnailUrl")
     private String thumbnailUrl;
+    
+    @SerializedName("videoUrl")
     private String videoUrl;
+    
+    // Progress is not in JSON, but kept for compatibility
+    private int progress;
 
-    // Constructor with all fields
-    public VideoItem(String title, String description, String duration, int progress, String thumbnailUrl, String videoUrl) {
+    // Constructors
+    public VideoItem() {}
+
+    public VideoItem(String title, String description, String duration, int views, String thumbnailUrl, String videoUrl) {
         this.title = title;
         this.description = description;
         this.duration = duration;
-        this.progress = progress;
+        this.views = views;
         this.thumbnailUrl = thumbnailUrl;
         this.videoUrl = videoUrl;
+        this.progress = 0;
     }
 
-    // Constructor with only title and videoUrl (for backward compatibility)
-    public VideoItem(String title, String videoUrl) {
-        this.title = title;
-        this.videoUrl = videoUrl;
-        this.description = ""; // Default empty description
-        this.duration = "0:00"; // Default duration
-        this.progress = 0; // Default progress
-        this.thumbnailUrl = ""; // Default empty thumbnail URL
-    }
+    // Getters and Setters
+    public String getTitle() { return title; }
+    public void setTitle(String title) { this.title = title; }
 
-    // Getters
-    public String getTitle() {
-        return title;
-    }
+    public String getDescription() { return description; }
+    public void setDescription(String description) { this.description = description; }
 
-    public String getDescription() {
-        return description;
-    }
+    public String getDuration() { return duration; }
+    public void setDuration(String duration) { this.duration = duration; }
 
-    public String getDuration() {
-        return duration;
-    }
+    public int getViews() { return views; }
+    public void setViews(int views) { this.views = views; }
 
-    public int getProgress() {
-        return progress;
-    }
+    public String getThumbnailUrl() { return thumbnailUrl; }
+    public void setThumbnailUrl(String thumbnailUrl) { this.thumbnailUrl = thumbnailUrl; }
 
-    public String getThumbnailUrl() {
-        return thumbnailUrl;
-    }
+    public String getVideoUrl() { return videoUrl; }
+    public void setVideoUrl(String videoUrl) { this.videoUrl = videoUrl; }
 
-    public String getVideoUrl() {
-        return videoUrl;
-    }
-
-    // Setters (optional, if you need to modify fields after creation)
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public void setDuration(String duration) {
-        this.duration = duration;
-    }
-
-    public void setProgress(int progress) {
-        this.progress = progress;
-    }
-
-    public void setThumbnailUrl(String thumbnailUrl) {
-        this.thumbnailUrl = thumbnailUrl;
-    }
-
-    public void setVideoUrl(String videoUrl) {
-        this.videoUrl = videoUrl;
-    }
+    public int getProgress() { return progress; }
+    public void setProgress(int progress) { this.progress = progress; }
 }
